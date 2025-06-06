@@ -1,0 +1,11 @@
+@use './colors' as color;
+
+$theme: (
+  primary: color.$dark-blue,
+  secondary: color.$dark-gray,
+  danger:  color.$dark-pink,
+  success: color.$neon-green,
+  info: color.$bright-blue,
+  dark: color.$black,
+  light: color.$white,
+)
