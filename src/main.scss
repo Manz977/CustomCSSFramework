@@ -2,3 +2,79 @@
 @use './base/index' as base;
 @use './variables/index' as variables;
 @use './base/montserratFont';
+
+// Containers
+.container {
+  padding: variables.$padding-md;
+}
+
+// Alerts
+.alert {
+  @extend %alert;
+}
+
+.alert-danger {
+  @extend %alert;
+  background-color: map-get(variables.$theme, 'danger');
+}
+
+.alert-success {
+  @extend %alert;
+  background-color: map-get(variables.$theme, 'success');
+}
+
+// Forms
+.form {
+  @extend %form;
+}
+
+.form-compact {
+  @extend %form;
+  display: inline-block;
+  padding: variables.$padding-xs;
+  border-radius: 0;
+
+  label {
+    display: inline-block;
+    margin-right: variables.$margin-xs;
+    width: variables.$width-100;
+    margin-bottom: variables.$margin-xs;
+    text-align: right;
+  }
+
+  input,
+  textarea {
+    width: variables.$width-half;
+    margin-bottom: variables.$margin-xs;
+    display: inline-block;
+    padding: variables.$padding-xs;
+    border-radius: 0;
+  }
+
+  button {
+    margin-left: variables.$margin-xl;
+  }
+}
+
+// Tables
+.table {
+  @extend %table;
+}
+
+.table-compact {
+  @extend %table;
+
+  th,
+  td {
+    padding: variables.$padding-xs;
+  }
+  
+  th {
+    color: map-get($map: variables.$theme, $key: 'dark');
+    background-color: transparent;
+  }
+
+  tr:nth-child(even) {
+    background-color: transparent;
+  }
+}

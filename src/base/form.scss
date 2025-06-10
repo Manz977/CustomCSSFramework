@@ -1,0 +1,35 @@
+@use '../variables/index.scss' as variables;
+
+%form {
+  padding: variables.$padding-sm;
+  border-width: variables.$border-width-sm;
+  border-style: solid;
+  border-color: map-get(variables.$theme, 'dark');
+  border-radius: variables.$rounded-lg;
+
+  label {
+    display: block;
+    margin-bottom: variables.$margin-sm;
+  }
+
+  input,
+  textarea {
+    width: variables.$width-full;
+    padding: variables.$padding-sm;
+    margin-bottom: variables.$margin-sm;
+    border-width: variables.$border-width-sm;
+    border-style: solid;
+    border-color: map-get(variables.$theme, 'dark');
+    border-radius: variables.$rounded-lg;
+
+    &::placeholder {
+      color: map-get(variables.$theme, 'secondary');
+    }
+
+    &:focus {
+      outline: none;
+      border-color: map-get(variables.$theme, 'primary');
+      box-shadow: 0 0 0 1px map-get(variables.$theme, 'primary');
+    }
+  }
+}

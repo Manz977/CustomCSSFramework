@@ -1,0 +1,12 @@
+@use '../variables/index.scss' as variables;
+
+%alert {
+  padding: variables.$padding-sm;
+  margin-bottom: variables.$margin-sm;
+  color: map-get(variables.$theme, 'light');
+  background-color: map-get(variables.$theme, 'primary');
+  border-width: variables.$border-width-sm;
+  border-style: solid;
+  border-color: map-get(variables.$theme, 'dark');
+  border-radius: variables.$rounded-lg;
+}
