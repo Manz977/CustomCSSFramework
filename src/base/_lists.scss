@@ -1,0 +1,40 @@
+@use '../variables/theme';
+@use '../variables/sizing' as sizing;
+@use '../variables/typography';
+
+ul, ol, dl {
+    padding-left: sizing.$padding-md;
+    padding-right: sizing.$padding-md;
+    padding-top: sizing.$padding-sm;
+    padding-bottom: sizing.$padding-sm;
+}
+
+ul {
+    list-style-type: theme.$list-bulleted;
+}
+
+ol {
+    list-style-type: theme.$list-numbered;
+}
+
+dl dt {
+    font-weight: typography.$font-weight-semi-bold;
+}
+
+// classes
+
+.list-alpha-lower {
+    list-style-type: theme.$list-alpha-lower;
+}
+
+.list-alpha-upper {
+    list-style-type: theme.$list-alpha-upper;
+}
+
+.list-roman-lower {
+    list-style-type: theme.$list-roman-lower;
+}
+
+.list-roman-upper {
+    list-style-type: theme.$list-roman-upper;
+}

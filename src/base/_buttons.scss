@@ -1,0 +1,25 @@
+@use '../variables/theme';
+@use '../variables/sizing';
+@use '../variables/typography';
+
+@mixin button ($btn-bg-color: map-get(theme.$theme, 'primary'), $btn-text-color: map-get(theme.$theme, 'light')) {
+    background-color: $btn-bg-color;
+    color: $btn-text-color;
+    display: inline-block;
+    padding: sizing.$padding-md sizing.$padding-xl;
+    text-align: center;
+    border-radius: sizing.$rounded-md;
+    cursor: pointer;
+    font-weight: typography.$font-weight-semi-bold;
+    text-decoration: none;
+
+    &:hover {
+        background-color: darken($btn-bg-color, 10%);
+    }
+}
+
+@each $key, $value in theme.$theme {
+    .btn-#{$key} {
+        @include button($value);
+    }
+}
