@@ -1,0 +1,28 @@
+@use '../variables/index.scss' as variables;
+
+%table {
+  width: variables.$width-full;
+  border-collapse: collapse;
+  border-width: variables.$border-width-sm;
+  border-style: solid;
+  border-color: map-get(variables.$theme, 'dark');
+  border-radius: variables.$rounded-lg;
+
+  th,
+  td {
+    padding: variables.$padding-sm;
+    border-width: variables.$border-width-sm;
+    border-style: solid;
+    border-color: map-get(variables.$theme, 'dark');
+  }
+
+  th {
+    color: map-get(variables.$theme, 'light');
+    font-weight: variables.$font-weight-bold;
+    background-color: map-get(variables.$theme, 'primary');
+  }
+
+  tr:nth-child(even) {
+    background-color: variables.$light-gray;
+  }
+}

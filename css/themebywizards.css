@@ -121,4 +121,123 @@ body {
   font-weight: 400;
 }
 
+.alert, .alert-danger, .alert-success {
+  padding: 12px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  background-color: #122c6f;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 12px;
+}
+
+.form, .form-compact {
+  padding: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 12px;
+}
+.form label, .form-compact label {
+  display: block;
+  margin-bottom: 12px;
+}
+.form input, .form-compact input,
+.form textarea,
+.form-compact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 12px;
+}
+.form input::placeholder, .form-compact input::placeholder,
+.form textarea::placeholder,
+.form-compact textarea::placeholder {
+  color: #5a4e59;
+}
+.form input:focus, .form-compact input:focus,
+.form textarea:focus,
+.form-compact textarea:focus {
+  outline: none;
+  border-color: #122c6f;
+  box-shadow: 0 0 0 1px #122c6f;
+}
+
+.table, .table-compact {
+  width: 100%;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 12px;
+}
+.table th, .table-compact th,
+.table td,
+.table-compact td {
+  padding: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+}
+.table th, .table-compact th {
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #122c6f;
+}
+.table tr:nth-child(even), .table-compact tr:nth-child(even) {
+  background-color: #b2adb1;
+}
+
+.container {
+  padding: 16px;
+}
+
+.alert-danger {
+  background-color: #D8006D;
+}
+
+.alert-success {
+  background-color: #13e695;
+}
+
+.form-compact {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 0;
+}
+.form-compact label {
+  display: inline-block;
+  margin-right: 6px;
+  width: 100px;
+  margin-bottom: 6px;
+  text-align: right;
+}
+.form-compact input,
+.form-compact textarea {
+  width: 50%;
+  margin-bottom: 6px;
+  display: inline-block;
+  padding: 6px;
+  border-radius: 0;
+}
+.form-compact button {
+  margin-left: 32px;
+}
+
+.table-compact th,
+.table-compact td {
+  padding: 6px;
+}
+.table-compact th {
+  color: #000000;
+  background-color: transparent;
+}
+.table-compact tr:nth-child(even) {
+  background-color: transparent;
+}
+
 /*# sourceMappingURL=themebywizards.css.map */
