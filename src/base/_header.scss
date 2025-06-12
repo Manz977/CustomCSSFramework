@@ -1,0 +1,31 @@
+@use '../variables/index.scss' as variables; 
+
+
+
+%h1 {
+  font-size: variables.$size-xl;
+  font-weight: variables.$font-weight-black;
+  text-align: center;
+}
+
+%h2 {
+  font-size: variables.$size-lg;
+  font-weight: variables.$font-weight-bold;
+  text-decoration: underline;
+}
+%h3 {
+  font-size: variables.$size-md;
+  font-weight: variables.$font-weight-semi-bold;
+}
+%h4 {
+  font-size: variables.$size-sm;
+  font-weight: variables.$font-weight-medium;
+}
+%h5 {
+  font-size: variables.$size-xs;
+  font-weight: variables.$font-weight-regular;
+}
+%h6 {
+  font-size: variables.$size-xs;
+  font-weight: variables.$font-weight-light;
+}

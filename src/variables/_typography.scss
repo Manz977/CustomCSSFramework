@@ -11,8 +11,25 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-black: 900;
 
+// font weights as utility classes 
+$font-weights: (
+  200: $font-weight-extra-light,
+  300: $font-weight-light,
+  400: $font-weight-regular,
+  500: $font-weight-medium,
+  600: $font-weight-semi-bold,
+  700: $font-weight-bold,
+  800: $font-weight-extra-bold,
+  900: $font-weight-black
+);
+
+
+@each $weight, $value in $font-weights {
+    .fw-#{$weight} {
+      font-weight: #{$value};
+    }
+  }
 
 body {
     font-family: $font-fmaily-body;
-    font-weight: $font-weight-regular;
 }

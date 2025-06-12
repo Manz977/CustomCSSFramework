@@ -4,6 +4,24 @@ $size-md: 16px;
 $size-lg: 24px;
 $size-xl: 32px;
 
+
+//Font Size utility classes
+$font: (
+  1: $size-xs,
+  2: $size-sm,
+  3: $size-md,
+  4: $size-lg,
+  5: $size-xl
+);
+
+@each $key, $value in $font {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}
+// End of size utility classes 
+
+// Margins 
 $margin-auto: 0 auto;
 $margin-0: 0;
 $margin-xs: $size-xs;
@@ -11,7 +29,36 @@ $margin-sm: $size-sm;
 $margin-md: $size-md;
 $margin-lg: $size-lg;
 $margin-xl: $size-xl;
+// Margins utility classes 
+$margin-values: (
+  auto: 0 auto,
+  0: 0,
+  xs: $size-xs,
+  sm: $size-sm,
+  md: $size-md,
+  lg: $size-lg,
+  xl: $size-xl
+);
 
+@each $name, $value in $margin-values {
+  .m-#{$name} {margin: $value;}
+  .mt-#{$name} {margin-top: $value;}
+  .mr-#{$name} { margin-right: $value; }
+  .mb-#{$name} { margin-bottom: $value; }
+  .ml-#{$name} { margin-left: $value; }
+  .mx-#{$name} {
+    margin-left: $value;
+    margin-right: $value;
+}
+.my-#{$name} {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+}
+// End of Margins utility classes 
+
+
+//Padding utility classes 
 $padding-0: 0;
 $padding-xs: $size-xs;
 $padding-sm: $size-sm;
@@ -19,6 +66,37 @@ $padding-md: $size-md;
 $padding-lg: $size-lg;
 $padding-xl: $size-xl;
 
+$padding-values: (
+  0: 0,
+  xs: $size-xs,
+  sm: $size-sm,
+  md: $size-md,
+  lg: $size-lg,
+  xl: $size-xl
+);
+
+@each $name, $value in $padding-values {
+  .p-#{$name} { padding: $value;}
+  .pt-#{$name} { padding-top: $value;}
+  .pb-#{$name} { padding-bottom: $value; }
+  .pr-#{$name} { padding-right: $value;}
+  .pl-#{$name} { padding-left: $value; }
+  .px-#{$name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$name} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
+
+
+// End of Padding utility classes 
+
+
+
+// Width 
 $width-0: 0;
 $width-5: 5px;
 $width-10: 10px;
@@ -53,11 +131,39 @@ $height-100: 100px;
 $height-half: 50%;
 $height-full: 100%;
 
+// Border utility classes 
 $rounded-sm: 4px;
 $rounded-md: 6px;
 $rounded-lg: 12px;
 $rounded-full: 50%;
 
+$border-radius: (
+  sm: $rounded-sm,
+  md: $rounded-md,
+  lg: $rounded-lg,
+  full: $rounded-full,
+);
+
+@each $name, $value in $border-radius {
+  .rounded-#{$name} {
+    border-radius: $value;
+  }
+}
+
+
 $border-width-sm: 1px;
 $border-width-md: 2px;
 $border-width-lg: 4px;
+
+$border-width: (
+  sm: $border-width-sm,
+  md: $border-width-md,
+  lg: $border-width-lg
+);
+
+@each $name, $value in $border-width {
+  .border-width-#{$name} {
+    border-width: $value;
+  }
+}
+// The end of border  utility classes
